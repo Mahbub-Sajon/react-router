@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About/About';
 import Friends from './components/Friends/Friends';
 import Home from './components/Home/Home';
+import NotFound from './components/NotFound/NotFound';
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <h1>Welcome</h1>
     <Routes>
       <Route path='/' element= {<Home></Home>}></Route>
-      <Route path ='/friend' element={<Friends></Friends>}></Route>
+      <Route path ='/friends' element={<Friends></Friends>}></Route>
       <Route path='/about' element={<About></About>}></Route>
+      <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
     </div>
   );
